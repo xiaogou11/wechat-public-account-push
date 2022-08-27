@@ -27,8 +27,6 @@ const main = async () => {
     // 获取金山词霸每日一句
     const { content: noteCh, note: noteEn } = await getCIBA()
     // 获取在一起的日期差
-    const loveDay = dayjs().diff(dayjs(config.loveDate), 'day')
-    // 获取结婚的日期差
     const marryDay = dayjs().diff(dayjs(config.marryDate), 'day')
     // 获取生日信息
     const birthdayMessage = getBirthdayMessage()
@@ -45,7 +43,6 @@ const main = async () => {
         { name: toLowerLine('maxTemperature'), value: maxTemperature, color: getColor() },
         { name: toLowerLine('windDirection'), value: windDirection, color: getColor() },
         { name: toLowerLine('windScale'), value: windScale, color: getColor() },
-        { name: toLowerLine('loveDay'), value: loveDay, color: getColor() },
         { name: toLowerLine('marryDay'), value: marryDay, color: getColor() },
         { name: toLowerLine('birthdayMessage'), value: birthdayMessage, color: getColor() },
         { name: toLowerLine('noteEn'), value: noteEn, color: getColor() },
